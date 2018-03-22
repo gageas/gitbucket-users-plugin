@@ -1,13 +1,13 @@
 name := "gitbucket-users-plugin"
 organization := "io.github.gitbucket"
-version := "1.0.1"
+version := "1.0.2"
 
-scalaVersion := "2.12.1"
+scalaVersion := "2.12.4"
 
 lazy val root = (project in file(".")).enablePlugins(SbtTwirl)
 
 libraryDependencies ++= Seq(
-  "io.github.gitbucket" %% "gitbucket"         % "4.10.0" % "provided",
+  "io.github.gitbucket" %% "gitbucket"         % "4.21.0" % "provided",
   "com.typesafe.play"   %% "twirl-compiler"    % "1.3.0" % "provided",
   "javax.servlet"        % "javax.servlet-api" % "3.1.0" % "provided"
 )

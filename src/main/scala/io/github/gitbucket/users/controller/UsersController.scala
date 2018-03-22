@@ -20,7 +20,7 @@ trait UsersControllerBase extends ControllerBase {
 
   // test
   get("/users"){
-    val users = getAllUsers(false)
+    val users = getAllUsers(false, true)
     val members = users.collect { case account if(account.isGroupAccount) =>
       account.userName -> getGroupMembers(account.userName).map(_.userName)
     }.toMap
